@@ -1,5 +1,10 @@
+import { House,User,Gear as Settings, ArrowBendDoubleUpRight, ArrowBendDoubleUpLeft } from 'phosphor-react'
+
 import { useState } from "react";
+
 import { movies } from "./data"
+
+import './style.css'
 
 export function Gallery() {
     
@@ -19,12 +24,20 @@ export function Gallery() {
 
     return (
         <>
+            <h1>{movies[index].title}</h1>
+
             <section className="gallery">
                 <img src={movies[index].images.poster} alt="" />
             </section>
 
-            <button onClick={handleNextClick}>Next</button>
-            <button onClick={handlePreviousClick}>Previous</button>
+            <p>Duration: {movies[index].duration}</p>
+
+            <div className="botoes">
+
+            <button onClick={handlePreviousClick}><ArrowBendDoubleUpLeft size={45} color="#e00000" /></button>
+            <button onClick={handleNextClick} ><ArrowBendDoubleUpRight size={45} color="#e00000" /></button>
+
+            </div>
         </>
     )
 }

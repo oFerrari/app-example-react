@@ -1,0 +1,8 @@
+.botoes{
+    display: flex;
+    gap: 100px;
+}
+
+p{
+    color: white;
+}
