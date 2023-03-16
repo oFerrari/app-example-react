@@ -5,3 +5,6 @@
     gap: 8px;
     padding: 8px;
 }
+.menu a:link,.menu a:visited{
+    text-decoration: none;
+}
