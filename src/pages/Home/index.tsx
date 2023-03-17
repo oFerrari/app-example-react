@@ -13,8 +13,9 @@ export function Home() {
             </header>
             <main>
                 <Menu>
+                    <Link to='/agenda'>
                     <MenuItem icon={<AddressBook size={24}/>} text={"Agenda"}/>
-                    
+                    </Link> 
                     <Link to='/gallery'>
                     <MenuItem icon={<ImageSquare size={24}/>} text={"Galeria"}/>
                     </Link> 
