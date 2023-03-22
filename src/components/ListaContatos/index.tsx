@@ -1,3 +1,5 @@
+import '../ListaContatos/style.css'
+
 type ListaContatos = {  
     children: React.ReactNode
 }
@@ -7,7 +9,6 @@ export function ListaContatos({children}:ListaContatos){
         <>
         <section className="listaContatos">
             {children}
-
         </section>
         </>
     )

@@ -1,0 +1,26 @@
+.cards img{
+    border-radius: 50%;
+    margin-right: 30px;
+}
+.cards h1{
+    color: black;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    display: flex;
+    background: white;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 20px 20px 20px 20px;
+    width: 600px;
+}
+.email{
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.btn-primary{
+    background-color: blueviolet;
+}
+
