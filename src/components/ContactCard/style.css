@@ -1,9 +1,12 @@
 .cards img{
-    border-radius: 50%;
+    clip-path: circle();
     margin-right: 30px;
 }
-.cards h1{
+.email{
+    text-decoration: none;
+    font-weight: normal;
     color: black;
+    padding: 10px 0 10px 0;
 }
 .cards{
     display: flex;
@@ -12,15 +15,8 @@
     background: white;
     padding: 15px;
     margin: 20px;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 20px;
     width: 600px;
 }
-.email{
-    text-decoration: none;
-    font-weight: normal;
-}
 
-.btn-primary{
-    background-color: blueviolet;
-}
 

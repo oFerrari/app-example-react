@@ -13,7 +13,7 @@ export function Home() {
             </header>
             <main>
                 <Menu>
-                    <Link to='/agenda'>
+                    <Link to='/schedule'>
                     <MenuItem icon={<AddressBook size={24}/>} text={"Agenda"}/>
                     </Link> 
                     <Link to='/gallery'>
