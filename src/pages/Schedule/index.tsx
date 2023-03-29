@@ -30,7 +30,7 @@ export function Schedule(){
             {contacts.map(contact =>{
                 return <p>{contact.name.first}</p>
             })
-        }
+            }
             <CartaoContato />
             <CartaoContato />
             <CartaoContato />

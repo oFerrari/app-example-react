@@ -3,13 +3,16 @@ import { Button } from "../Button";
 import { Title } from "../Title";
 import {Contact} from "../../types/index"
 
+type ContactCardProps = {
+    contactData: Contact,
+}
 
-
-export function ContactCard({contactCard}:ContactCardProps){
+export function ContactCard({contactData}:ContactCardProps){
+    const { name, email, picture } = contactData;
     return(
         <>
             <div className="cards">
-                <img src="https://randomuser.me/api/portraits/women/56.jpg" alt="" />
+                <img src="picture.medium" alt="" />
                 <div>
                     <h2>Alma Richardson</h2>
                     <p className='email'> alma.richardson@example.com</p>
