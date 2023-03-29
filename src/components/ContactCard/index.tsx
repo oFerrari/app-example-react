@@ -14,8 +14,8 @@ export function ContactCard({contactData}:ContactCardProps){
             <div className="cards">
                 <img src={picture.medium} alt="" />
                 <div>
-                    <h2>Alma Richardson</h2>
-                    <p className='email'> alma.richardson@example.com</p>
+                    <h2>{name.first} {name.last}</h2>
+                    <p className='email'> {email}</p>
 
                     <Button text='Detalhes' type='primary'></Button>
                 </div> 
