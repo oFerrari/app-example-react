@@ -4,7 +4,18 @@ import { ContactList } from "../../components/ContactList";
 import { Title } from "../../components/Title";
 import { getContacts } from "../../services/api";
 
+type Contact = {
+    name: {
+        first: string,
+        last: string,
 
+    },
+    email: string,
+
+    picture: {
+        medium: string,
+    }
+}
 
 export function Schedule(){
 
@@ -23,17 +34,15 @@ export function Schedule(){
         <header>
             <Title text='Agenda de Contatos' />
         </header>
-            <input onInput={(event)=>{setSearch(event.target.value)}} type="search" className="inputSearch"/>  
+            <input type="search" className="inputSearch"/>  
         <main>
             
         <ContactList>
-            {contacts.map(contact =>{
-                return <p>{contact.name.first}</p>
+            {
+                contacts.map(contact =>{
+                return <ContactCard contactData={contact} />
             })
             }
-            <CartaoContato />
-            <CartaoContato />
-            <CartaoContato />
         </ContactList>
         </main>
         </>
