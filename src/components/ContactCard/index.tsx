@@ -12,7 +12,7 @@ export function ContactCard({contactData}:ContactCardProps){
     return(
         <>
             <div className="cards">
-                <img src="picture.medium" alt="" />
+                <img src={picture.medium} alt="" />
                 <div>
                     <h2>Alma Richardson</h2>
                     <p className='email'> alma.richardson@example.com</p>

@@ -1,6 +1,8 @@
 .cards img{
     clip-path: circle();
     margin-right: 30px;
+    width: 100px;
+    image-rendering: optimizeQuality;
 }
 .email{
     text-decoration: none;

@@ -2,12 +2,13 @@
     width: 100%;
     height: 60px;
     background-color: aliceblue;
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
 }
 .navbar-menu a,.navbar-menu a:visited{
     color: #333;
