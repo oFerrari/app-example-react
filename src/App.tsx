@@ -6,6 +6,7 @@ import { Home } from './pages/Home'
 import { StateExample } from './pages/StateExample'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { Schedule } from './pages/Schedule'
+import { GalleryPage } from './components/GalleryPage'
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
      <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>} />
-          <Route path='/gallery' element={<Gallery/>} />
+          <Route path='/gallery' element={<GalleryPage/>} />
           <Route path='/schedule' element={<Schedule/>} />
         </Routes>
         <NavBarMenu />

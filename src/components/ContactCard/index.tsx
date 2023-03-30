@@ -1,6 +1,6 @@
 import '../ContactCard/style.css'
-import { Button } from "../Button";
-import { Title } from "../Title";
+import {Button} from '@mui/material'
+/* import { Title } from "../Title"; */
 import {Contact} from "../../types/index"
 
 type ContactCardProps = {
@@ -17,7 +17,7 @@ export function ContactCard({contactData}:ContactCardProps){
                     <h2>{name.first} {name.last}</h2>
                     <p className='email'> {email}</p>
 
-                    <Button text='Detalhes' type='primary'></Button>
+                    <Button className='button' variant="contained">Detalhes</Button>
                 </div> 
             </div>
         </>
