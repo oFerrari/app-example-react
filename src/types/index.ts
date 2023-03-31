@@ -5,6 +5,9 @@ export type Contact = {
     },
     email:string,
     picture:{
-        medium:string
+        medium:string,
+    },
+    login:{
+        uuid:string
     }
 }

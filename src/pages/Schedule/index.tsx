@@ -1,50 +1,52 @@
+import { CircularProgress } from "@mui/material";
 import { useEffect, useState } from "react";
 import { ContactCard } from "../../components/ContactCard";
 import { ContactList } from "../../components/ContactList";
 import { Title } from "../../components/Title";
+import { BaseLayout } from "../../layout/BaseLayout";
 import { getContacts } from "../../services/api";
+import {Contact} from "../../types/index"
+import '../Schedule/style.css'
 
-type Contact = {
-    name: {
-        first: string,
-        last: string,
+export function Schedule() {
 
-    },
-    email: string,
+    const [search, setSearch] = useState('')
+    const [isLoading, setIsLoading] = useState<Boolean>(false)
+    const [contacts, setContacts] = useState<Contact[]>([])
 
-    picture: {
-        medium: string,
+    const filteredContacts = () =>{
+
     }
-}
 
-export function Schedule(){
-
-    const [search,setSearch] = useState('')
-    const [contacts,setContacts] = useState<Contact[]>([])
-
-    useEffect(()=>{
+    useEffect(() => {
         async function listContacts() {
+            setIsLoading(true)
             setContacts(await getContacts())
+            setIsLoading(false)
         }
         listContacts()
-        },[])
+    }, [])
 
-    return(
+    return (
         <>
-        <header>
-            <Title text='Agenda de Contatos' />
-        </header>
-            <input type="search" className="inputSearch"/>  
-        <main>
-            
-        <ContactList>
-            {
-                contacts.map(contact =>{
-                return <ContactCard contactData={contact} />
-            })
-            }
-        </ContactList>
-        </main>
+            <header>
+                <Title text='Agenda de Contatos' />
+            </header>
+            <input type="search" className="inputSearch" />
+            <main>
+
+                {isLoading ? (
+                    <CircularProgress />) : (
+                    <ContactList>
+                        {
+                            contacts.map(contact => {
+                                return <ContactCard key={contact.login.uuid} contactData={contact} />
+                            })
+                        }
+                    </ContactList>
+
+                )}
+            </main>
         </>
     )
 }
