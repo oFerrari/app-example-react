@@ -8,19 +8,20 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { Schedule } from './pages/Schedule'
 import { GalleryPage } from './components/GalleryPage'
 import { CssBaseline } from '@mui/material'
+import { Login } from './pages/Login'
 
 
 function App() {
   return (
     <div id="App">
       <CssBaseline />
-     <BrowserRouter>
+      <BrowserRouter>
         <Routes>
+          <Route path='/login' element={<Login/>} />
           <Route path='/' element={<Home/>} />
           <Route path='/gallery' element={<GalleryPage/>} />
           <Route path='/schedule' element={<Schedule/>} />
         </Routes>
-        <NavBarMenu />
      </BrowserRouter>
     </div>
   )

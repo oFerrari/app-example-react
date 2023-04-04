@@ -1,6 +1,8 @@
+import { Button } from '@mui/material';
 import { House,User,Gear as Settings, ArrowBendDoubleUpRight, ArrowBendDoubleUpLeft } from 'phosphor-react'
-
 import { useState } from "react";
+import { BrowserRouter } from 'react-router-dom';
+import { BaseLayout } from '../../layout/BaseLayout';
 
 import { movies } from "./data"
 
@@ -20,10 +22,11 @@ export function Gallery() {
         if(index > 0){
             setIndex(index - 1);
         }
-    }
+    } 
 
     return (
         <>
+        <BaseLayout appBarTitle="Gallery">
             <h1>{movies[index].title}</h1>
 
             <section className="gallery">
@@ -33,11 +36,11 @@ export function Gallery() {
             <p>Duration: {movies[index].duration}</p>
 
             <div className="botoes">
-
-            <button onClick={handlePreviousClick}><ArrowBendDoubleUpLeft size={45} color="#e00000" /></button>
-            <button onClick={handleNextClick} ><ArrowBendDoubleUpRight size={45} color="#e00000" /></button>
-
+            <Button variant="text" onClick={handlePreviousClick}><ArrowBendDoubleUpLeft size={45} color="#e00000" /></Button>
+            {index+1}
+            <Button variant="text" onClick={handleNextClick}><ArrowBendDoubleUpRight size={45} color="#e00000" /></Button>
             </div>
+        </BaseLayout>
         </>
     )
 }

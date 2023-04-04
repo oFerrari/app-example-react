@@ -22,6 +22,6 @@ export function Home() {
                     </Link> 
                 </Menu>
             
-            </BaseLayout>
+        </BaseLayout>
     )
 }
