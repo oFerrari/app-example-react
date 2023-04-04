@@ -7,6 +7,7 @@ import { BaseLayout } from "../../layout/BaseLayout";
 import { getContacts } from "../../services/api";
 import {Contact} from "../../types/index"
 import '../Schedule/style.css'
+import { AlignItemsList } from "../../components/AlignItemsList";
 
 export function Schedule() {
 
@@ -40,7 +41,7 @@ export function Schedule() {
                     <ContactList>
                         {
                             contacts.map(contact => {
-                                return <ContactCard key={contact.login.uuid} contactData={contact} />
+                                return <AlignItemsList key={contact.login.uuid} contactData={contact} />
                             })
                         }
                     </ContactList>
