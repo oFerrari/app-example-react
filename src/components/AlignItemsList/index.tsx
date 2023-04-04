@@ -9,7 +9,7 @@ type ContactCardProps = {
 export function AlignItemsList({contactData}:ContactCardProps){
     const { name, email, picture } = contactData;
     return (
-<List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper', marginTop:'20px'}}>
+<List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper', marginTop:'20px', borderRadius: '10px',}}>
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
           <Avatar alt="Remy Sharp" src={picture.medium} />
@@ -30,7 +30,7 @@ export function AlignItemsList({contactData}:ContactCardProps){
                 display:'flex',
                         background: '#764ba2',
                         color: 'white',
-                        marginTop:'10px',
+                        marginTop:'5px',
                         justifyContent:'center',
                         alignItems:'center'
                     }}>Detalhes</Button>

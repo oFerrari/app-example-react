@@ -30,11 +30,11 @@ export function Schedule() {
 
     return (
         <>
-            <header>
-                <Title text='Agenda de Contatos' />
-            </header>
+        <BaseLayout appBarTitle="Schedule">
+            
+            <Title text='Agenda de Contatos' />
+            
             <input type="search" className="inputSearch" />
-            <main>
 
                 {isLoading ? (
                     <CircularProgress />) : (
@@ -47,7 +47,8 @@ export function Schedule() {
                     </ContactList>
 
                 )}
-            </main>
+            
+            </BaseLayout>
         </>
     )
 }
