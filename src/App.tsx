@@ -6,7 +6,7 @@ import { Home } from './pages/Home'
 import { StateExample } from './pages/StateExample'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { Schedule } from './pages/Schedule'
-import { GalleryPage } from './components/GalleryPage'
+import { GalleryPage } from './pages/GalleryPage'
 import { CssBaseline } from '@mui/material'
 import { Login } from './pages/Login'
 

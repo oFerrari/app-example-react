@@ -41,28 +41,4 @@ main{
   width: 100%;
  
 }
-form{
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-form h2{
-  text-align: center;
-  color:#c2b1d3;
-}
-form input{
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 0;
-  outline: none;
-}
-.inputSearch{
-  width: 600px;
-  padding: 5px;
-  outline: none;
-  margin: 10px;
-  position: relative;
-  justify-content: center;
-  align-items:center;
-}
+

@@ -1,4 +1,4 @@
-import { CircularProgress } from "@mui/material";
+import { CircularProgress, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
 import { ContactCard } from "../../components/ContactCard";
 import { ContactList } from "../../components/ContactList";
@@ -33,20 +33,16 @@ export function Schedule() {
         <BaseLayout appBarTitle="Schedule">
             
             <Title text='Agenda de Contatos' />
-            
-            <input type="search" className="inputSearch" />
-
-                {isLoading ? (
-                    <CircularProgress />) : (
-                    <ContactList>
-                        {
-                            contacts.map(contact => {
-                                return <AlignItemsList key={contact.login.uuid} contactData={contact} />
-                            })
-                        }
-                    </ContactList>
-
-                )}
+            <TextField id="outlined-basic" label="Outlined" variant="outlined" fullWidth />
+            {isLoading ? (
+        <CircularProgress />
+      ) : (
+        <ContactList>{/* O certo era criar props pra esses elementos? */}
+          {contacts.map((contact) => {
+            return <AlignItemsList key={contact.login.uuid} contactData={contact} />;
+          })}
+        </ContactList>
+      )}
             
             </BaseLayout>
         </>

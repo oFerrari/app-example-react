@@ -1,5 +1,5 @@
 import { BaseLayout } from "../../layout/BaseLayout";
-import { Gallery } from "../Gallery";
+import { Gallery } from "../../components/Gallery";
 
 export function GalleryPage(){
     return(
