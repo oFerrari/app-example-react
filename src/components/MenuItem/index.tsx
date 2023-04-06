@@ -1,4 +1,5 @@
 import { Box, ButtonBase } from '@mui/material'
+import { BaseLayout } from '../../layout/BaseLayout'
 
 type MenuItemProps = {
     icon: React.ReactNode
@@ -8,7 +9,7 @@ type MenuItemProps = {
 export function MenuItem({icon,text}:MenuItemProps){
     return (
         <>
-         
+     <BaseLayout appBarTitle="Menu">  
         <ButtonBase sx={{
             width:'100px',
             height:'100px',
@@ -24,7 +25,7 @@ export function MenuItem({icon,text}:MenuItemProps){
             textDecoration: 'none',
             
         }}>{icon}{text}</ButtonBase>
-        
-        </>
+     </BaseLayout>     
+    </>
     )
 }
