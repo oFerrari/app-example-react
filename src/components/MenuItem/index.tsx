@@ -10,6 +10,7 @@ export function MenuItem({icon,text}:MenuItemProps){
     return (
         <>
      <BaseLayout appBarTitle="Menu">  
+     
         <ButtonBase sx={{
             width:'100px',
             height:'100px',
