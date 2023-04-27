@@ -1,6 +1,5 @@
 import { CircularProgress, TextField } from "@mui/material";
 import { ChangeEvent, useEffect, useState } from "react";
-import { ContactCard } from "../../components/ContactCard";
 import { ContactList } from "../../components/ContactList";
 import { Title } from "../../components/Title";
 import { BaseLayout } from "../../layout/BaseLayout";
@@ -56,7 +55,7 @@ export function Schedule() {
         </ContactList>
       )}
             
-            </BaseLayout>
+        </BaseLayout>
         </>
     )
 }
